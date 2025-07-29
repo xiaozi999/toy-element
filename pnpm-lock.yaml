@@ -107,13 +107,6 @@ importers:
   packages/hooks: {}
 
   packages/play:
-    dependencies:
-      toy-element:
-        specifier: workspace:*
-        version: link:../core
-      vue:
-        specifier: ^3.5.18
-        version: 3.5.18(typescript@5.8.3)
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.2.4
