@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo 'todo'",
+    "test": "pnpm --filter @toy-element/components test",
     "dev": "pnpm --filter @toy-element/play dev",
     "build": "pnpm --filter @toy-element/play build",
     "preview": "pnpm --filter @toy-element/play preview",
@@ -39,6 +39,9 @@
     "toy-element": "workspace:*",
     "@toy-element/hooks": "workspace:*",
     "@toy-element/utils": "workspace:*",
-    "@toy-element/theme": "workspace:*"
+    "@toy-element/theme": "workspace:*",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8"
   }
 }
