@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref ,computed} from 'vue';
+import { ref ,computed, inject} from 'vue';
 import type {ButtonProps,ButtonEmits,ButtonInstance} from './types'
 import {template, throttle} from 'lodash-es'
+import { BUTTON_GROUP_CTX_KEY } from './contants';
 import ErIcon  from '../Icon/Icon.vue';
 defineOptions({
   name:'ErButton'
@@ -20,6 +21,8 @@ const emits=defineEmits<ButtonEmits>()
 
 const slots=defineSlots()
 
+const ctx= inject(BUTTON_GROUP_CTX_KEY,void 0)
+
 const _ref=ref<HTMLButtonElement>()
 
 const iconStyles=computed(()=>{
@@ -28,9 +31,21 @@ const iconStyles=computed(()=>{
   }
 })
 
+const size = computed(()=>{
+  return ctx?.size ?? props?.size ?? ""
+})
+
+const type = computed(()=>{
+  return ctx?.type ?? props?.type ?? ""
+})  
+
+const disabled=computed(()=>{
+  return ctx?.disabled || props?.disabled || false
+})
+
 const handleClick=(e:MouseEvent)=>emits('click',e)
 
-const handleClickThrottled=throttle(handleClick,props.throttleDuration)
+const handleClickThrottled=throttle(handleClick,props.throttleDuration,{trailing:false})
 
 
 defineExpose<ButtonInstance>({
@@ -68,11 +83,10 @@ defineExpose<ButtonInstance>({
     </slot>
   </template>
   <er-icon
-    v-if="icon&&!loading"
-    :icon="icon"
-    :style="iconStyles"
-    size="1x"
-  ></er-icon>
+  v-if="icon&&!loading"
+  :icon="icon"
+  :style="iconStyles"
+  size="1x"></er-icon>
     <slot></slot>
   </component>
 </template>

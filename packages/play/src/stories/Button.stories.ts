@@ -1,13 +1,13 @@
 import type {Meta,StoryObj,ArgTypes} from '@storybook/vue3-vite'
 import { fn,expect,within,userEvent } from 'storybook/test'
-import { ErButton } from 'toy-element'
+import { ErButton,ErButtonGroup } from 'toy-element'
 
 type Story = StoryObj<typeof ErButton> & { argTypes?: ArgTypes };
 
 const meta: Meta<typeof ErButton> = {
   title: "Example/Button",
   component: ErButton,
-  subcomponents: { ErButton },
+  subcomponents: { ButtonGroup: ErButtonGroup },
   tags: ["autodocs"],
   argTypes: {
     type: {
@@ -139,7 +139,7 @@ export const Group: Story & { args: { content1: string; content2: string } } = {
     content2: "Button2",
   },
   render: (args) => ({
-    components: { ErButton },
+    components: { ErButton, ErButtonGroup },
     setup() {
       return { args };
     },

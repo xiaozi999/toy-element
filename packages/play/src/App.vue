@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <er-button type="primary" size="small">test</er-button>
+  <er-button type="primary" size="small" :useThrottle="false">test</er-button>
 </template>
 
 <style scoped>
