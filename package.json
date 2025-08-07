@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "build": "pnpm --filter toy-element build",
     "test": "pnpm --filter @toy-element/components test",
     "dev": "pnpm --filter @toy-element/play dev",
-    "build": "pnpm --filter @toy-element/play build",
     "preview": "pnpm --filter @toy-element/play preview",
     "docs:dev": "pnpm --filter @toy-element/docs dev",
     "docs:build": "pnpm --filter @toy-element/docs build",
@@ -17,12 +17,19 @@
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@popperjs/core": "^2.11.8",
+    "async-validator": "^4.2.5",
     "@tsconfig/node18": "^18.2.2",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.19.9",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/tsconfig": "^0.5.1",
+    "move-file-cli": "^3.0.0",
+    "npm-run-all": "^4.1.5",
     "postcss-color-mix": "^1.1.0",
     "postcss-each": "^1.1.0",
     "postcss-each-variables": "^0.3.0",
@@ -34,14 +41,14 @@
     "vue-tsc": "^1.8.27"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21",
-    "vue": "^3.5.18",
-    "toy-element": "workspace:*",
-    "@toy-element/hooks": "workspace:*",
-    "@toy-element/utils": "workspace:*",
-    "@toy-element/theme": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/vue-fontawesome": "^3.0.8"
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@toy-element/hooks": "workspace:*",
+    "@toy-element/theme": "workspace:*",
+    "@toy-element/utils": "workspace:*",
+    "lodash-es": "^4.17.21",
+    "toy-element": "workspace:*",
+    "vue": "^3.5.18"
   }
 }

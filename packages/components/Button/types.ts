@@ -1,4 +1,4 @@
-import {Component, Ref} from 'vue'
+import type {Component, Ref} from 'vue'
 export type ButtonType = "primary" | "success" | "warning" | "danger" | "info";
 
 export type ButtonSize = "large" | "default" | "small";

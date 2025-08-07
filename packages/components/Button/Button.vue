@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref ,computed, inject} from 'vue';
 import type {ButtonProps,ButtonEmits,ButtonInstance} from './types'
-import {template, throttle} from 'lodash-es'
+import {throttle} from 'lodash-es'
 import { BUTTON_GROUP_CTX_KEY } from './contants';
 import ErIcon  from '../Icon/Icon.vue';
 defineOptions({
