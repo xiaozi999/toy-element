@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Toy-Element",
+  title: "Xiaozi-Element",
   description: "高仿 ElementPlus 组件",
-  base:"/toy-element/", // 设置根路径
+  base:"/xiaozi-element/", // 设置根路径
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

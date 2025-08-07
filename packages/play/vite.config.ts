@@ -13,15 +13,15 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 export default defineConfig({
   plugins: [vue()],
   optimizeDeps: {
-    exclude: ['@toy-element/utils', '@toy-element/components', '@toy-element/hooks', '@toy-element/theme']
+          exclude: ['@xiaozi-element/utils', '@xiaozi-element/components', '@xiaozi-element/hooks', '@xiaozi-element/theme']
   },
   resolve: {
-    alias: {
-      '@toy-element/utils': resolve(__dirname, '../utils'),
-      '@toy-element/components': resolve(__dirname, '../components'),
-      '@toy-element/hooks': resolve(__dirname, '../hooks'),
-      '@toy-element/theme': resolve(__dirname, '../theme')
-    }
+          alias: {
+        '@xiaozi-element/utils': resolve(__dirname, '../utils'),
+        '@xiaozi-element/components': resolve(__dirname, '../components'),
+        '@xiaozi-element/hooks': resolve(__dirname, '../hooks'),
+        '@xiaozi-element/theme': resolve(__dirname, '../theme')
+      }
   },
   test: {
     projects: [{

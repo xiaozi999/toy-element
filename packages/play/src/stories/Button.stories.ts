@@ -1,6 +1,6 @@
 import type {Meta,StoryObj,ArgTypes} from '@storybook/vue3-vite'
 import { fn,expect,within,userEvent } from 'storybook/test'
-import { ErButton,ErButtonGroup } from 'toy-element'
+import { ErButton,ErButtonGroup } from 'xiaozi-element'
 
 type Story = StoryObj<typeof ErButton> & { argTypes?: ArgTypes };
 
