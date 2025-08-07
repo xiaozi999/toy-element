@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "xiaozi-element"
+  name: "Toy-Element"
   text: "高仿 ElementPlus 组件"
   tagline: My great project tagline
   actions:

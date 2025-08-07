@@ -1,5 +1,5 @@
 {
-  "name": "toy-element",
+  "name": "@xiaozi-element/core",
   "version": "1.0.0",
   "description": "Components library by Vue3 + TS",
   "main": "./dist/umd/index.umd.cjs",

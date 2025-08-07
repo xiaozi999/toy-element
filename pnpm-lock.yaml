@@ -17,19 +17,19 @@ importers:
       '@fortawesome/vue-fontawesome':
         specifier: ^3.0.8
         version: 3.1.1(@fortawesome/fontawesome-svg-core@6.7.2)(vue@3.5.18(typescript@5.8.3))
-      '@xiaozi-element/hooks':
+      '@toy-element/hooks':
         specifier: workspace:*
         version: link:packages/hooks
-      '@xiaozi-element/theme':
+      '@toy-element/theme':
         specifier: workspace:*
         version: link:packages/theme
-      '@xiaozi-element/utils':
+      '@toy-element/utils':
         specifier: workspace:*
         version: link:packages/utils
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
-      xiaozi-element:
+      toy-element:
         specifier: workspace:*
         version: link:packages/core
       vue:
@@ -109,7 +109,7 @@ importers:
 
   packages/core:
     dependencies:
-      '@xiaozi-element/components':
+      '@toy-element/components':
         specifier: workspace:*
         version: link:../components
     devDependencies:
