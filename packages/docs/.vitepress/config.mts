@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Xiaozi-Element",
   description: "高仿 ElementPlus 组件",
-  base:"/xiaozi-element/", // 设置根路径
+  base:"/toy-element/", // 设置根路径
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

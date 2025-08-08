@@ -6,7 +6,8 @@
   "scripts": {
     "build": "pnpm --filter xiaozi-element build",
     "test": "pnpm --filter @xiaozi-element/components test",
-    "dev": "pnpm --filter @xiaozi-element/play dev",
+    "dev": "pnpm run build && pnpm --filter @xiaozi-element/play dev",
+    "storybook": "pnpm run build && pnpm --filter @xiaozi-element/play storybook",
     "preview": "pnpm --filter @xiaozi-element/play preview",
     "docs:dev": "pnpm --filter @xiaozi-element/docs dev",
     "docs:build": "pnpm --filter @xiaozi-element/docs build",
