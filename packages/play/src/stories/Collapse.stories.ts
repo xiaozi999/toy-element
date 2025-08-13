@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
 import { ErCollapse, ErCollapseItem } from "xiaozi-element";
-
+import 'xiaozi-element/dist/theme/Collapse.css'
 type Story = StoryObj<typeof ErCollapse>;
 
 const meta: Meta<typeof ErCollapse> = {

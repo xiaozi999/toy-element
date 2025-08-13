@@ -25,7 +25,7 @@
     "types": ["node"],
     "baseUrl": "./",
     "paths": {
-      "@eric-ui/components": ["./packages/components"]
+      "@xiaozi-element/components": ["./packages/components"]
     }
   },
   "include": [
@@ -35,5 +35,5 @@
     "packages/utils/**/*.ts",
     "packages/components/**/*.ts",
   ],
-  "exclude": ["packages/components/vitest.config.ts","packages/components/index.test.ts"]
+  "exclude": ["packages/components/vitest.config.ts","packages/components/index.test.ts","env.d.ts"]
 }
