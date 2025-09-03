@@ -49,7 +49,10 @@ const handleClickThrottled=throttle(handleClick,props.throttleDuration,{trailing
 
 
 defineExpose<ButtonInstance>({
-  ref:_ref
+  ref:_ref,
+  disabled,
+  size,
+  type
 })
 </script>
 

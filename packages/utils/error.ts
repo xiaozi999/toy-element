@@ -8,15 +8,18 @@ class ErUIError extends Error{
   }
 }
 
+function createErError(scope:string,msg:string){
+  return new ErUIError(`[${scope}] ${msg}`)
+}
 export function throwError(scope:string,msg:string){
-  throw new ErUIError(`[${scope}] ${msg}`)
+  throw createErError(scope,msg)
 }
 
 export function debugWarn(error:Error):void
 export function debugWarn(scope:string,msg:string):void
 export function debugWarn(scope:string|Error,msg?:string){
   if(process.env.NODE_ENV !== 'production'){
-    const err=isString(scope)?new ErUIError(`[${scope}] ${msg}`):scope
+    const err=isString(scope)?createErError(scope,msg!):scope
     console.warn(err)
   }
 }

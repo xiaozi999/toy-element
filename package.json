@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "cross-env NODE_ENV=production pnpm --filter xiaozi-element build",
-    "test": "cross-env NODE_ENV=test pnpm --filter @xiaozi-element/components test",
+    "test": " pnpm --filter @xiaozi-element/components test",
     "dev": "pnpm run build && pnpm --filter @xiaozi-element/play dev",
     "storybook": "pnpm run build && pnpm --filter @xiaozi-element/play storybook",
     "docs:dev": "pnpm --filter @xiaozi-element/docs dev",
@@ -50,6 +50,9 @@
     "@xiaozi-element/theme": "workspace:*",
     "@xiaozi-element/utils": "workspace:*",
     "lodash-es": "^4.17.21",
+    "@vue/test-utils": "^2.4.6",
+    "@vitest/coverage-v8": "^1.6.1",
+    "jsdom": "^24.0.0",
     "vue": "^3.5.18",
     "xiaozi-element": "workspace:*"
   }

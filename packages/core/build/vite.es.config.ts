@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { readdirSync, readdir } from "fs";
 import { resolve } from "path";
 import { defer, delay, filter, map, includes } from "lodash-es";
-import hooks from "./hooksPlugin";
+import hooks from "../hooksPlugin";
 import shell from "shelljs";
 import terser from "@rollup/plugin-terser";
 import vue from "@vitejs/plugin-vue";
@@ -78,7 +78,7 @@ export default defineConfig({
     minify: false,
     cssCodeSplit: true,
     lib: {
-      entry: resolve(__dirname, "./index.ts"),
+      entry: resolve(__dirname, "../index.ts"),
       name: "ToyElement",
       fileName: "index",
       formats: ["es"],

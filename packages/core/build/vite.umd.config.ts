@@ -5,7 +5,7 @@ import { compression } from 'vite-plugin-compression2'
 import { resolve } from 'path'
 import shell from 'shelljs'
 import { delay } from 'lodash-es'
-import hooks from './hooksPlugin'
+import hooks from '../hooksPlugin'
 import terser from "@rollup/plugin-terser";
 
 const TRY_MOVE_STYLES_DELAY=800 as const
@@ -51,7 +51,7 @@ export default defineConfig({
   build: {
     outDir: 'dist/umd',
     lib: {
-      entry: resolve(__dirname, './index.ts'),
+      entry: resolve(__dirname, '../index.ts'),  // 修复：添加 ../
       name: 'ToyElement',
       fileName:'index',
       formats:['umd']
