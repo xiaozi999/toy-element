@@ -85,11 +85,11 @@ defineExpose<ButtonInstance>({
       spin></er-icon>
     </slot>
   </template>
-  <er-icon
-  v-if="icon&&!loading"
-  :icon="icon"
-  :style="iconStyles"
-  size="1x"></er-icon>
+    <er-icon
+    v-if="icon&&!loading"
+    :icon="icon"
+    :style="iconStyles"
+    size="1x"></er-icon>
     <slot></slot>
   </component>
 </template>
