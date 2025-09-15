@@ -1,0 +1,33 @@
+import {inject, type Ref} from 'vue'
+import { omit } from 'lodash-es'
+import {createI18n ,i18nSymbol,type I18nInstance} from 'vue3-i18n'
+import type {Language} from '@xiaozi-element/locale'
+import English from '@xiaozi-element/locale/lang/en'
+import Japanese from '@xiaozi-element/locale/lang/ja'
+import Korean from '@xiaozi-element/locale/lang/ko'
+import Chinese from '@xiaozi-element/locale/lang/zh-cn'
+
+export function useLocale(localeOverrides?:Ref<Language>) {
+  if(!localeOverrides){
+    return omit(
+      <I18nInstance>(
+        inject(
+          i18nSymbol,
+          createI18n({locale:English.name,messages:{en:English.el}})
+        )
+      ),
+      'install'
+    )
+  }
+  return omit(
+    createI18n({
+      locale:localeOverrides.value.name,
+      messages:{
+        en:English.el,[localeOverrides.value.name]:localeOverrides.value.el
+      }
+    }),
+    'install'
+  )
+}
+
+export default useLocale

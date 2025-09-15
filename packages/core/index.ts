@@ -1,4 +1,4 @@
-import { makeInstaller } from '@xiaozi-element/utils'
+import { makeInstaller } from './makeInstaller'
 import components from './components'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -11,4 +11,5 @@ library.add(fas)
 const installer = makeInstaller(components)
 
 export * from '@xiaozi-element/components'
+export * from '@xiaozi-element/locale'
 export default installer 

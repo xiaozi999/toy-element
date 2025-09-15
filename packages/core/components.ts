@@ -1,4 +1,28 @@
-import {ErButton,ErIcon,ErButtonGroup,ErCollapse,ErCollapseItem,ErAlert,ErTooltip,ErPopconfirm} from '@xiaozi-element/components'
+import {
+  ErButton,
+  ErIcon,
+  ErButtonGroup,
+  ErCollapse,
+  ErCollapseItem,
+  ErAlert,
+  ErTooltip,
+  ErPopconfirm,
+  ErDropdown,
+  ErDropdownItem,
+  ErConfigProvider
+} from '@xiaozi-element/components'
 import type {Plugin} from 'vue'
 
-export default [ErButton,ErIcon,ErButtonGroup,ErCollapse,ErCollapseItem,ErAlert,ErTooltip,ErPopconfirm] as Plugin[]
+export default [
+  ErButton,
+  ErIcon,
+  ErButtonGroup,
+  ErCollapse,
+  ErCollapseItem,
+  ErAlert,
+  ErTooltip,
+  ErPopconfirm,
+  ErDropdown,
+  ErDropdownItem,
+  ErConfigProvider
+] as Plugin[]
