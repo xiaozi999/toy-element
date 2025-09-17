@@ -8,7 +8,7 @@ const isStringNumber=(val:string):boolean=>{
   return !Number.isNaN(Number(val))
 }
 
-export function addUnit(val:string|number ,defaultUnit:"px"){
+export function addUnit(val:string|number ,defaultUnit="px"){
   if(!val) return '';
   if(isNumber(val) || isStringNumber(val)){
     return `${val}${defaultUnit}`

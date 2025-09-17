@@ -49,7 +49,7 @@ const popperNode=ref<HTMLElement>()
 const transition=ref('fade')
 
 const popperOptions=computed(()=>({
-  placements:props.placement,
+  placement:props.placement,
   modifiers:[
     {
       name:'offset',
