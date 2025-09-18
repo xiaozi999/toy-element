@@ -49,6 +49,6 @@ describe("Message", () => {
     const elements =document.querySelectorAll('.er-message')
     expect(elements.length).toBe(2)
     expect(getTopValue(elements[0])).toBe(100)
-    expect(getTopValue(elements[1])).toBe(50)
+    expect(getTopValue(elements[1])).toBe(150)
   })
 });

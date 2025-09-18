@@ -66,7 +66,7 @@ describe("Dropdown/Dropdown.vue", () => {
       }
     });
     expect(wrapper.text()).toContain("Default slot");
-    expect(wrapper.find('.er-dropdown').exists()).toBe(items.length);
+    expect(wrapper.find('.er-dropdown').exists()).toBe(true);
   });
   
   it("should emit command event when item is clicked", async () => {
