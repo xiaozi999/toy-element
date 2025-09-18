@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted, computed,watch } from 'vue';
 import type { MessageProps, MessageComInstance } from './types';
+import { ref, onMounted, computed,watch } from 'vue';
 import { delay ,bind } from 'lodash-es';
 import { getLastBottomOffset } from './methods';
 import { useOffset,useEventListener } from '@xiaozi-element/hooks';
@@ -31,7 +31,7 @@ const { topOffset, bottomOffset } = useOffset({
 })
 const customStyle=computed(()=>({
   top:addUnit(topOffset.value),
-  bottom:addUnit(bottomOffset.value),
+  zIndex:props.zIndex,
 }))
 
 let timer:number
