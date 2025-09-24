@@ -11,7 +11,9 @@ import {
   ErDropdownItem,
   ErConfigProvider,
   ErMessage,
-  ErNotification
+  ErNotification,
+  ErInput,
+  ErMessageBox
 } from '@xiaozi-element/components'
 import type {Plugin} from 'vue'
 
@@ -28,5 +30,7 @@ export default [
   ErDropdownItem,
   ErConfigProvider,
   ErMessage,
-  ErNotification
+  ErNotification,
+  ErInput,
+  ErMessageBox
 ] as Plugin[]
